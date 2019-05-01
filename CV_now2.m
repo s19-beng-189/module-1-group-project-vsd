@@ -4,8 +4,8 @@ function CV=CV_now2(t,CVS,CVD)
 
 T2 =0.02;  %alternate the heartbeats 
 TS2=0.008; 
-tauS2 = 0.004;
-tauD2 = 0.012;
+tauS2 = 0.0008;
+tauD2 = 0.0024;
 
 tc=rem(t,T2); %tc=time in the current cycle, 
              %measured from start of systole.
