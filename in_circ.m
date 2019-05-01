@@ -107,6 +107,8 @@ G(iRV,ipa) = 1/RPu;       %But G(ipa,iRV) = O (no leak)
 G(ipa,ipv) = 1/Rp;        %no valve
 G(ipv,ipa) = 1/Rp;        %no valve
 G(ipv,iLV) = 1/RMi;       %But G(iLV,ipv) = O (no leak)
+G(iLV,iRV) = 2;           %LV/RV conductance 
+G(iRV,iLV) = 2;
 G %This writes the result on the screen. 
 
 %matrix of initial valve states: 
@@ -136,7 +138,8 @@ jTr = 3;
 jPu = 4;
 jp  = 5;
 jMi = 6;
-Nflows = 6;
+jV = 7;
+Nflows = 7;
 %note index of upstream and downstream chamber
 %for each flow:
 iU = zeros(Nflows,1);
@@ -153,6 +156,8 @@ iU(jp) = ipa;
 iD(jp) = ipv;
 iU(jMi) = ipv;
 iD(jMi) = iLV;
+iU(jV)  = iRV;
+iD(jV)  = iLV;
 %extract the conductances from the matrix G: 
 Gf = zeros(Nflows,1);
 Gr = zeros(Nflows,1);
