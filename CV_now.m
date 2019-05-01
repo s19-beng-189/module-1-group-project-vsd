@@ -1,3 +1,6 @@
+%This function calculates the current compliance 
+%from systolic time,constant tau,systolic and diastolic compliance.
+
 function CV=CV_now(t,CVS,CVD)
 %filename: CV_now.m
 global T TS tauS tauD;

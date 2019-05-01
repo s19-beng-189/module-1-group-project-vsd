@@ -1,3 +1,6 @@
+%This function calculates the pressure for different blood vessels
+%based on past pressure and compliance, current compliance and valve state
+
 function P=P_new(P_old,C_old,C,S) 
 %filename: P_new.m
 global G dt CHECK N; 

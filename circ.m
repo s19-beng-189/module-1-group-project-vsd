@@ -1,3 +1,9 @@
+%This script is the main script of the model for whole body circulation
+%utilized for BENG 189 Module 1 Project
+
+%Model adapted from Frank C. Hoppensteadt and Charles S. Peskin, Modeling 
+%and Simulation in Medicine and the Life Sciences?Second Edition
+
 clear all % clear all variables 
 clf %and figures
 global T TS tauS tauD;
@@ -7,7 +13,8 @@ for klok=1:klokmax
     t=klok*dt;
     P_old=P;
     C_old=C;
-%find current values of left and right %ventricular compliance and store each
+%find current values of left and right
+%ventricular compliance and store each
 %of them in the appropriate slot in the array C:
     C(iLV)=CV_now(t,CLVS,CLVD); 
     C(iRV)=CV_now(t,CRVS,CRVD);
