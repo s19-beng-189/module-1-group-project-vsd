@@ -18,10 +18,10 @@ subplot(3,1,3),plot(t_plot,Q_plot([jTr,jPu],:)) ,title("RV Flows"),legend('Tr','
 
 %systemic and pulmonary flows:
 figure(3)
-plot(t_plot,Q_plot([js,jp],:)) ,title("Systemic and Pulmonary Flows"),
+plot(t_plot,Q_plot([js,jp],:)) ,title("Systemic and Pulmonary Flows")
 legend('Systemic','Pulmonary')
 
 %pressure-volume loops for both ventricles 
 figure(4)
-subplot(2,1,1),plot(V_plot(iLV ,:),P_plot(iLV ,:)) ,title("PV Loops for Left Ventricle")
-subplot(2,1,2),plot(V_plot(iRV,:),P_plot(iRV,:)),title("PV Loops for Right Ventricle")
+subplot(2,1,1),plot(V_plot(iLV ,:),P_plot(iLV ,:)) ,title("PV Loops for Left Ventricle"),xlim([0,0.15])
+subplot(2,1,2),plot(V_plot(iRV,:),P_plot(iRV,:)),title("PV Loops for Right Ventricle"),xlim([0,0.15])

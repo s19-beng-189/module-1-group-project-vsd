@@ -7,8 +7,8 @@ dt = 0.01*T    %Time step duration (minutes)
 klokmax = 15*T/dt %Total number of timesteps
 %This choice implies simulation of 15 cardiac cycles. 
 
-tauS = 0.0025  %CLV time constant during systole (minutes)
-tauD = 0.0075  %CLV time constant during diastole (minutes) 
+tauS = 0.0008  %CLV time constant during systole (minutes) %originally 0.0025
+tauD = 0.0024  %CLV time constant during diastole (minutes) %originally 0.0075
 
 Rs = 17.5      %Systemic resistance (mmHg/(liter/minute))
 Rp = 1.79      %Pulmonary resistance (mmHg/(liter/minute))
@@ -30,10 +30,10 @@ Cpa = 0.00412  %Pulmonary arterial compliance (liters/mmHg)
 Csv = 1.75     %Systemic venous compliance (liters/mmHg) 
 Cpv = 0.08     %Pulmonary venous compliance (liters/mmHg) 
 
-CLVS = 0.00003 %Min (systolic) value of CLV (liters/mmHg) 
-CLVD = 0.0146  %Max (diastolic) value of CLV (liters/mmHg) 
-CRVS = 0.0002  %Min (systolic) value of CRV (liters/mmHg)
-CRVD = 0.0365  %Max (diastolic) value of CRV (liters/mmHg) 
+CLVS = 0.0002 %Min (systolic) value of CLV (liters/mmHg) %originally 0.00003
+CLVD = 0.02  %Max (diastolic) value of CLV (liters/mmHg) %originally 0.0146
+CRVS = 0.0016  %Min (systolic) value of CRV (liters/mmHg) %originally 0.0002
+CRVD = 0.05  %Max (diastolic) value of CRV (liters/mmHg) %originally 0.0365
 
 Vsad = 0.825   %Systemic arterial volume at P = O (liters) 
 Vpad = 0.0382  %Pulmonary arterial volume at P = O (liters)
