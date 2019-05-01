@@ -1,7 +1,7 @@
 %This script initializes the model for whole body simulation in circ.m
 
 T = 0.0125     %Duration of heartbeat (minutes)
-TS = 0.0050    %Duration of systole (minutes)
+TS = 0.0040    %Duration of systole (minutes)
 dt = 0.01*T    %Time step duration (minutes)
 %This choice implies 100 timesteps per cardiac cycle. 
 klokmax = 15*T/dt %Total number of timesteps
@@ -25,7 +25,7 @@ RPu = 0.01     %pulmonic valve resistance (mmHg/(liter/minute))
 %blood pressure be roughly 120/80 mmHg
 %and to make the pulmonary
 %blood pressure be roughly 25/8 mmHg.
-Csa = 0.00175  %Systemic arterial compliance (liters/mmHg) 
+Csa = 0.00175     %Systemic arterial compliance (liters/mmHg) 
 Cpa = 0.00412  %Pulmonary arterial compliance (liters/mmHg) 
 Csv = 1.75     %Systemic venous compliance (liters/mmHg) 
 Cpv = 0.08     %Pulmonary venous compliance (liters/mmHg) 
@@ -56,7 +56,7 @@ N = 6;
 %Note that the code that follows is independent 
 %of the specific numbering scheme chosen above. 
 %Compliance vector:
-C = zeros (N, 1) ;
+C = zeros(N,1);
 %This makes C a column vector of length N. 
 C(iLV) = CV_now(0,CLVS,CLVD); %initial value
 C(isa) = Csa;

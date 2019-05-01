@@ -18,7 +18,8 @@ for klok=1:klokmax
 %of them in the appropriate slot in the array C:
     C(iLV)=CV_now(t,CLVS,CLVD); 
     C(iRV)=CV_now(t,CRVS,CRVD);
-%find self-consistent valve states and pressures: set_valves
+%find self-consistent valve states and pressures: 
+set_valves
 %store variables in arrays for future plotting: 
     t_plot(klok)=t;
     C_plot(:,klok)=C;
