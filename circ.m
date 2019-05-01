@@ -16,6 +16,7 @@ for klok=1:klokmax
 %find current values of left and right
 %ventricular compliance and store each
 %of them in the appropriate slot in the array C:
+   %{ 
     if(t>0.0625 && t<0.125)
         C(iLV)=CV_now2(t,CLVS,CLVD); 
         C(iRV)=CV_now2(t,CRVS,CRVD);
@@ -23,11 +24,12 @@ for klok=1:klokmax
         C(iLV)=CV_now(t,CLVS,CLVD); 
         C(iRV)=CV_now(t,CRVS,CRVD);
     end 
+%}
 
-   % C(iLV)=CV_now(t,CLVS,CLVD); 
-   % C(iRV)=CV_now(t,CRVS,CRVD);
+   C(iLV)=CV_now(t,CLVS,CLVD); 
+   C(iRV)=CV_now(t,CRVS,CRVD);
 %find self-consistent valve states and pressures: 
-set_valves
+    set_valves
 %store variables in arrays for future plotting: 
     t_plot(klok)=t;
     C_plot(:,klok)=C;
