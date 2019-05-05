@@ -138,7 +138,7 @@ jTr = 3;
 jPu = 4;
 jp  = 5;
 jMi = 6;
-jV = 7;
+jFo = 7;
 Nflows = 7;
 %note index of upstream and downstream chamber
 %for each flow:
@@ -156,8 +156,8 @@ iU(jp) = ipa;
 iD(jp) = ipv;
 iU(jMi) = ipv;
 iD(jMi) = iLV;
-iU(jV)  = iRV;
-iD(jV)  = iLV;
+iU(jFo)  = iRV;
+iD(jFo)  = iLV;
 %extract the conductances from the matrix G: 
 Gf = zeros(Nflows,1);
 Gr = zeros(Nflows,1);

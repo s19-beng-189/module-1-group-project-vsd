@@ -25,3 +25,7 @@ legend('Systemic','Pulmonary')
 figure(4)
 subplot(2,1,1),plot(V_plot(iLV ,:),P_plot(iLV ,:)) ,title("PV Loops for Left Ventricle"),xlim([0,0.15])
 subplot(2,1,2),plot(V_plot(iRV,:),P_plot(iRV,:)),title("PV Loops for Right Ventricle"),xlim([0,0.15])
+
+%instantaneous heart rate (average for each 300 timesteps)
+figure(5)
+plot(F),title('Change in Heart Rate'),legend('Instantaneous Heart Rate'),ylim([0,90])
